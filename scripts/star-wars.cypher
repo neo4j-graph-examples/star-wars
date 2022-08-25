@@ -1,7 +1,7 @@
 CREATE CONSTRAINT IF NOT EXISTS FOR (n: `Character`) REQUIRE (n.`name`) IS UNIQUE;
 
 
-LOAD CSV WITH HEADERS FROM "characters.csv" AS nodeRecord
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/neo4j-graph-examples/star-wars/main/import/characters.csv" AS nodeRecord
 WITH *
 WHERE NOT nodeRecord.`name` IN $idsToSkip AND NOT nodeRecord.`name` IS NULL
 MERGE (n: `Character` { `name`: nodeRecord.`name` })
@@ -19,7 +19,7 @@ CREATE CONSTRAINT IF NOT EXISTS FOR (n: `Planet`) REQUIRE (n.`name`) IS UNIQUE;
 
 
 
-LOAD CSV WITH HEADERS FROM "planets.csv" AS nodeRecord
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/neo4j-graph-examples/star-wars/main/import/planets.csv" AS nodeRecord
 WITH *
 WHERE NOT nodeRecord.`name` IN $idsToSkip AND NOT nodeRecord.`name` IS NULL
 MERGE (n: `Planet` { `name`: nodeRecord.`name` })
@@ -35,7 +35,7 @@ SET n.`population` = nodeRecord.`population`;
 
 CREATE CONSTRAINT IF NOT EXISTS FOR (n: `Species`) REQUIRE (n.`name`) IS UNIQUE;
 
-LOAD CSV WITH HEADERS FROM "species.csv" AS nodeRecord
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/neo4j-graph-examples/star-wars/main/import/species.csv" AS nodeRecord
 WITH *
 WHERE NOT nodeRecord.`name` IN $idsToSkip AND NOT nodeRecord.`name` IS NULL
 MERGE (n: `Species` { `name`: nodeRecord.`name` })
@@ -49,17 +49,17 @@ SET n.`average_lifespan` = nodeRecord.`average_lifespan`
 SET n.`language` = nodeRecord.`language`
 SET n.`homeworld` = nodeRecord.`homeworld`;
 
-LOAD CSV WITH HEADERS FROM "characters.csv" AS relRecord
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/neo4j-graph-examples/star-wars/main/import/characters.csv" AS relRecord
 MATCH (source: `Character` { `name`: relRecord.`name` })
 MATCH (target: `Planet` { `name`: relRecord.`homeworld` })
 MERGE (source)-[r: `FROM`]->(target);
 
-LOAD CSV WITH HEADERS FROM "characters.csv" AS relRecord
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/neo4j-graph-examples/star-wars/main/import/characters.csv" AS relRecord
 MATCH (source: `Character` { `name`: relRecord.`name` })
 MATCH (target: `Species` { `name`: relRecord.`species` })
 MERGE (source)-[r: `IDENTIFIES_AS`]->(target);
 
-LOAD CSV WITH HEADERS FROM "species.csv" AS relRecord
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/neo4j-graph-examples/star-wars/main/import/species.csv" AS relRecord
 MATCH (source: `Species` { `name`: relRecord.`name` })
 MATCH (target: `Planet` { `name`: relRecord.`homeworld` })
 MERGE (source)-[r: `ORIGINATED_FROM`]->(target);
