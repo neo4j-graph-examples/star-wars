@@ -1,0 +1,93 @@
+﻿== Exploring Star Wars Data in Neo4j
+:images: {img}
+
+image::{img}/star-wars-logo.svg[float=right,width=200px]
+
+Star Wars is not just a set of movies a cultural phenomenon about a universe full of robots, humans, aliens, forces and Jedi.
+
+This guide will show you how to:
+
+* Find: Find relationships between species, planets and people
+* Query: discover relationships between species, planets and people
+
+Throughout the guide you'll find Cypher statements that you can execute, by clicking on them and then executing them by hitting the run button.
+
+== The Model
+
+image::{img}/model.svg[width=100%]
+
+== The Data
+
+The data comes from Kaggle: https://www.kaggle.com/datasets/jsphyg/star-wars
+
+We can import it using the visual Import tool, or `LOAD CSV` Cypher statements.
+
+=== Nodes
+
+We model the `Character`, `Planet`, `Species` as nodes.
+
+=== Relationships
+
+Characters originate from Planets and identify as Speciees
+
+`(:Character)-[:FROM]->(:Planet)`
+`(:Character)-[:IDENTIFIES_AS]->(:Species)`
+`(:Species)-[:ORIGINATES_FROM]->(:Planet)`
+
+
+If you want to see it yourself, run:
+
+[source,cypher]
+----
+CALL db.schema.visualization;
+----
+
+== Basic Queries
+
+Labels in the graph and counts for each:
+
+[source,cypher]
+----
+MATCH (n)
+RETURN labels(n) as label, count(*) as freq
+ORDER BY freq DESC;
+----
+
+Relationship-types in the graph and counts for eachabel:
+
+[source,cypher]
+----
+MATCH ()-[r]->()
+RETURN type(r) as type, count(*) as freq
+ORDER BY freq DESC;
+----
+
+== Top Species
+
+Which are the most frequent species?
+
+[source,cypher]
+----
+MATCH (s:Species)<-[:IDENTIFIES_AS]-()
+RETURN s.name,  count(*) AS freq
+ORDER BY freq DESC
+LIMIT 5;
+----
+
+//  TODO MORE
+
+== Relationships Between Species and Planets
+
+[source,cypher]
+----
+MATCH path = (s:Species)<-[:IDENTIFIES_AS]-(c:Character)-[:FROM]->(p:Planet)
+WHERE s.name = 'Human'
+ RETURN paths
+----
+
+//  TODO MORE
+
+== Further Reading
+
+* https://www.kaggle.com/datasets/jsphyg/star-wars[Kaggle Data^]
+* https://www.youtube.com/watch?v=fdPWH4P4V5A[Video^]

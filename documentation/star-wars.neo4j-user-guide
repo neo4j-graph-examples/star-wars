@@ -1,0 +1,232 @@
+<style type="text/css" media="screen">
+/*
+.nodes-image {
+	margin:-100;
+}
+*/	
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+
+.imageblock .content img, .image img {max-width: 100%;}
+.deck h3, .deck h4 {display: block !important;margin-bottom:8px;margin-top:5px;}
+.listingblock {margin:8px;}
+.pull-bottom {position:relative;bottom:1em;}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note:before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip:before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning:before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution:before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important:before{content:"\f06a";color:#bf0000}
+.admonitionblock.note.speaker { display:none; }
+</style>
+<style type="text/css" media="screen">
+/* #editor.maximize-editor .CodeMirror-code { font-size:24px; line-height:26px; } */
+</style>
+<article class="guide" ng-controller="AdLibDataController">
+  <carousel class="deck container-fluid">
+    <!--slide class="row-fluid">
+      <div class="col-sm-3">
+        <h3>Exploring Star Wars Data in Neo4j</h3>
+        <p class="lead">Information</p>
+			<!dl>
+				
+				
+				
+				
+				
+			</dl>
+		</div>
+      <div class="col-sm-9">
+        <figure>
+          <img style="width:300px" src=""/>
+        </figure>
+      </div>
+    </slide-->
+    
+
+
+<slide class="row-fluid">
+  <div class="col-sm-12">
+    <h3>Exploring Star Wars Data in Neo4j</h3>
+    <br/>
+    <div>
+      <div class="imageblock" style="float: right;">
+<div class="content">
+<img src="https://guides.neo4j.com/sandbox/star-wars/img/star-wars-logo.svg" alt="star wars logo" width="200px">
+</div>
+</div>
+<div class="paragraph">
+<p>Star Wars is not just a set of movies a cultural phenomenon about a universe full of robots, humans, aliens, forces and Jedi.</p>
+</div>
+<div class="paragraph">
+<p>This guide will show you how to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Find: Find relationships between species, planets and people</p>
+</li>
+<li>
+<p>Query: discover relationships between species, planets and people</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Throughout the guide you&#8217;ll find Cypher statements that you can execute, by clicking on them and then executing them by hitting the run button.</p>
+</div>
+	</div>
+  </div>
+</slide>
+
+
+
+<slide class="row-fluid">
+  <div class="col-sm-12">
+    <h3>The Model</h3>
+    <br/>
+    <div>
+      <div class="imageblock">
+<div class="content">
+<img src="https://guides.neo4j.com/sandbox/star-wars/img/model.svg" alt="model" width="100%">
+</div>
+</div>
+	</div>
+  </div>
+</slide>
+
+
+
+<slide class="row-fluid">
+  <div class="col-sm-12">
+    <h3>The Data</h3>
+    <br/>
+    <div>
+      <div class="paragraph">
+<p>The data comes from Kaggle: <a href="https://www.kaggle.com/datasets/jsphyg/star-wars" class="bare">https://www.kaggle.com/datasets/jsphyg/star-wars</a></p>
+</div>
+<div class="paragraph">
+<p>We can import it using the visual Import tool, or <code>LOAD CSV</code> Cypher statements.</p>
+</div>
+
+
+
+   <h4>Nodes</h4>
+   <div class="paragraph">
+<p>We model the <code>Character</code>, <code>Planet</code>, <code>Species</code> as nodes.</p>
+</div>
+
+
+
+   <h4>Relationships</h4>
+   <div class="paragraph">
+<p>Characters originate from Planets and identify as Speciees</p>
+</div>
+<div class="paragraph">
+<p><code>(:Character)-[:FROM]&#8594;(:Planet)</code>
+<code>(:Character)-[:IDENTIFIES_AS]&#8594;(:Species)</code>
+<code>(:Species)-[:ORIGINATES_FROM]&#8594;(:Planet)</code></p>
+</div>
+<div class="paragraph">
+<p>If you want to see it yourself, run:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre mode="cypher"  class="highlight pre-scrollable programlisting cm-s-neo code runnable standalone-example ng-binding" data-lang="cypher" lang="cypher"><!--code class="cypher language-cypher"-->CALL db.schema.visualization;<!--/code--></pre>
+</div>
+</div>
+	</div>
+  </div>
+</slide>
+
+
+
+<slide class="row-fluid">
+  <div class="col-sm-12">
+    <h3>Basic Queries</h3>
+    <br/>
+    <div>
+      <div class="paragraph">
+<p>Labels in the graph and counts for each:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre mode="cypher"  class="highlight pre-scrollable programlisting cm-s-neo code runnable standalone-example ng-binding" data-lang="cypher" lang="cypher"><!--code class="cypher language-cypher"-->MATCH (n)
+RETURN labels(n) as label, count(*) as freq
+ORDER BY freq DESC;<!--/code--></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Relationship-types in the graph and counts for eachabel:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre mode="cypher"  class="highlight pre-scrollable programlisting cm-s-neo code runnable standalone-example ng-binding" data-lang="cypher" lang="cypher"><!--code class="cypher language-cypher"-->MATCH ()-[r]-&gt;()
+RETURN type(r) as type, count(*) as freq
+ORDER BY freq DESC;<!--/code--></pre>
+</div>
+</div>
+	</div>
+  </div>
+</slide>
+
+
+
+<slide class="row-fluid">
+  <div class="col-sm-12">
+    <h3>Top Species</h3>
+    <br/>
+    <div>
+      <div class="paragraph">
+<p>Which are the most frequent species?</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre mode="cypher"  class="highlight pre-scrollable programlisting cm-s-neo code runnable standalone-example ng-binding" data-lang="cypher" lang="cypher"><!--code class="cypher language-cypher"-->MATCH (s:Species)&lt;-[:IDENTIFIES_AS]-()
+RETURN s.name,  count(*) AS freq
+ORDER BY freq DESC
+LIMIT 5;<!--/code--></pre>
+</div>
+</div>
+	</div>
+  </div>
+</slide>
+
+
+
+<slide class="row-fluid">
+  <div class="col-sm-12">
+    <h3>Relationships Between Species and Planets</h3>
+    <br/>
+    <div>
+      <div class="listingblock">
+<div class="content">
+<pre mode="cypher"  class="highlight pre-scrollable programlisting cm-s-neo code runnable standalone-example ng-binding" data-lang="cypher" lang="cypher"><!--code class="cypher language-cypher"-->MATCH path = (s:Species)&lt;-[:IDENTIFIES_AS]-(c:Character)-[:FROM]-&gt;(p:Planet)
+WHERE s.name = 'Human'
+ RETURN paths<!--/code--></pre>
+</div>
+</div>
+	</div>
+  </div>
+</slide>
+
+
+
+<slide class="row-fluid">
+  <div class="col-sm-12">
+    <h3>Further Reading</h3>
+    <br/>
+    <div>
+      <div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.kaggle.com/datasets/jsphyg/star-wars" target="_blank">Kaggle Data</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=fdPWH4P4V5A" target="_blank">Video</a></p>
+</li>
+</ul>
+</div>
+	</div>
+  </div>
+</slide>
+  </carousel>
+</article>

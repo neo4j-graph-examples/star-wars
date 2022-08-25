@@ -1,0 +1,10 @@
+{
+    "name": "star-wars",
+    "description":"Exploring a Star Wars Dataset in Neo4j",
+    "dbms": [
+      {
+          "scriptFile":"scripts/star-wars.cypher",
+          "targetNeo4jVersion": "^4.4"
+      }
+  ]
+}
