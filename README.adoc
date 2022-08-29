@@ -40,9 +40,9 @@ image::{example}[width=600]
 .Example Query:
 [source,cypher,role=query-example,param-name=species,param-value="Human",result-column=planet,expected-result=Tatooine]
 ----
-MATCH (s:Species)<-[:IDENTIFIES_AS]-(c:Character)-[:FROM]->(p:Planet)
+MATCH (s:Species)<-[:OF]-(c:Character)-[:HOMEWORLD]->(p:Planet)
 WHERE s.name = $species
- RETURN DISTINCT p.name as planet
+RETURN DISTINCT p.name as planet
 ----
 
 === Setup

@@ -1,0 +1,83 @@
+:ID,created,edited,url,name,birth_year,eye_color,height,gender,skin_color,mass,hair_color,:LABEL
+6,2014-12-09T13:50:51.644000Z,2014-12-20T21:17:56.891000Z,https://swapi.dev/api/people/1/,Luke Skywalker,19BBY,blue,172,male,fair,77,blond,Character
+7,2014-12-10T15:10:51.357000Z,2014-12-20T21:17:50.309000Z,https://swapi.dev/api/people/2/,C-3PO,112BBY,yellow,167,n/a,gold,75,n/a,Character
+8,2014-12-10T15:11:50.376000Z,2014-12-20T21:17:50.311000Z,https://swapi.dev/api/people/3/,R2-D2,33BBY,red,96,n/a,"white, blue",32,n/a,Character
+9,2014-12-10T15:18:20.704000Z,2014-12-20T21:17:50.313000Z,https://swapi.dev/api/people/4/,Darth Vader,41.9BBY,yellow,202,male,white,136,none,Character
+10,2014-12-10T15:20:09.791000Z,2014-12-20T21:17:50.315000Z,https://swapi.dev/api/people/5/,Leia Organa,19BBY,brown,150,female,light,49,brown,Character
+11,2014-12-10T15:52:14.024000Z,2014-12-20T21:17:50.317000Z,https://swapi.dev/api/people/6/,Owen Lars,52BBY,blue,178,male,light,120,"brown, grey",Character
+12,2014-12-10T15:53:41.121000Z,2014-12-20T21:17:50.319000Z,https://swapi.dev/api/people/7/,Beru Whitesun lars,47BBY,blue,165,female,light,75,brown,Character
+13,2014-12-10T15:57:50.959000Z,2014-12-20T21:17:50.321000Z,https://swapi.dev/api/people/8/,R5-D4,unknown,red,97,n/a,"white, red",32,n/a,Character
+14,2014-12-10T15:59:50.509000Z,2014-12-20T21:17:50.323000Z,https://swapi.dev/api/people/9/,Biggs Darklighter,24BBY,brown,183,male,light,84,black,Character
+15,2014-12-10T16:16:29.192000Z,2014-12-20T21:17:50.325000Z,https://swapi.dev/api/people/10/,Obi-Wan Kenobi,57BBY,blue-gray,182,male,fair,77,"auburn, white",Character
+16,2014-12-10T16:20:44.310000Z,2014-12-20T21:17:50.327000Z,https://swapi.dev/api/people/11/,Anakin Skywalker,41.9BBY,blue,188,male,fair,84,blond,Character
+17,2014-12-10T16:26:56.138000Z,2014-12-20T21:17:50.330000Z,https://swapi.dev/api/people/12/,Wilhuff Tarkin,64BBY,blue,180,male,fair,unknown,"auburn, grey",Character
+18,2014-12-10T16:42:45.066000Z,2014-12-20T21:17:50.332000Z,https://swapi.dev/api/people/13/,Chewbacca,200BBY,blue,228,male,unknown,112,brown,Character
+19,2014-12-10T16:49:14.582000Z,2014-12-20T21:17:50.334000Z,https://swapi.dev/api/people/14/,Han Solo,29BBY,brown,180,male,fair,80,brown,Character
+20,2014-12-10T17:03:30.334000Z,2014-12-20T21:17:50.336000Z,https://swapi.dev/api/people/15/,Greedo,44BBY,black,173,male,green,74,n/a,Character
+21,2014-12-10T17:11:31.638000Z,2014-12-20T21:17:50.338000Z,https://swapi.dev/api/people/16/,Jabba Desilijic Tiure,600BBY,orange,175,hermaphrodite,"green-tan, brown","1,358",n/a,Character
+22,2014-12-12T11:08:06.469000Z,2014-12-20T21:17:50.341000Z,https://swapi.dev/api/people/18/,Wedge Antilles,21BBY,hazel,170,male,fair,77,brown,Character
+23,2014-12-12T11:16:56.569000Z,2014-12-20T21:17:50.343000Z,https://swapi.dev/api/people/19/,Jek Tono Porkins,unknown,blue,180,male,fair,110,brown,Character
+24,2014-12-15T12:26:01.042000Z,2014-12-20T21:17:50.345000Z,https://swapi.dev/api/people/20/,Yoda,896BBY,brown,66,male,green,17,white,Character
+25,2014-12-15T12:48:05.971000Z,2014-12-20T21:17:50.347000Z,https://swapi.dev/api/people/21/,Palpatine,82BBY,yellow,170,male,pale,75,grey,Character
+26,2014-12-15T12:49:32.457000Z,2014-12-20T21:17:50.349000Z,https://swapi.dev/api/people/22/,Boba Fett,31.5BBY,brown,183,male,fair,78.2,black,Character
+27,2014-12-15T12:51:10.076000Z,2014-12-20T21:17:50.351000Z,https://swapi.dev/api/people/23/,IG-88,15BBY,red,200,none,metal,140,none,Character
+28,2014-12-15T12:53:49.297000Z,2014-12-20T21:17:50.355000Z,https://swapi.dev/api/people/24/,Bossk,53BBY,red,190,male,green,113,none,Character
+29,2014-12-15T12:56:32.683000Z,2014-12-20T21:17:50.357000Z,https://swapi.dev/api/people/25/,Lando Calrissian,31BBY,brown,177,male,dark,79,black,Character
+30,2014-12-15T13:01:57.178000Z,2014-12-20T21:17:50.359000Z,https://swapi.dev/api/people/26/,Lobot,37BBY,blue,175,male,light,79,none,Character
+31,2014-12-18T11:07:50.584000Z,2014-12-20T21:17:50.362000Z,https://swapi.dev/api/people/27/,Ackbar,41BBY,orange,180,male,brown mottle,83,none,Character
+32,2014-12-18T11:12:38.895000Z,2014-12-20T21:17:50.364000Z,https://swapi.dev/api/people/28/,Mon Mothma,48BBY,blue,150,female,fair,unknown,auburn,Character
+33,2014-12-18T11:16:33.020000Z,2014-12-20T21:17:50.367000Z,https://swapi.dev/api/people/29/,Arvel Crynyd,unknown,brown,unknown,male,fair,unknown,brown,Character
+34,2014-12-18T11:21:58.954000Z,2014-12-20T21:17:50.369000Z,https://swapi.dev/api/people/30/,Wicket Systri Warrick,8BBY,brown,88,male,brown,20,brown,Character
+35,2014-12-18T11:26:18.541000Z,2014-12-20T21:17:50.371000Z,https://swapi.dev/api/people/31/,Nien Nunb,unknown,black,160,male,grey,68,none,Character
+36,2014-12-19T16:54:53.618000Z,2014-12-20T21:17:50.375000Z,https://swapi.dev/api/people/32/,Qui-Gon Jinn,92BBY,blue,193,male,fair,89,brown,Character
+37,2014-12-19T17:05:57.357000Z,2014-12-20T21:17:50.377000Z,https://swapi.dev/api/people/33/,Nute Gunray,unknown,red,191,male,mottled green,90,none,Character
+38,2014-12-19T17:21:45.915000Z,2014-12-20T21:17:50.379000Z,https://swapi.dev/api/people/34/,Finis Valorum,91BBY,blue,170,male,fair,unknown,blond,Character
+39,2014-12-19T17:28:26.926000Z,2014-12-20T21:17:50.381000Z,https://swapi.dev/api/people/35/,Padmé Amidala,46BBY,brown,185,female,light,45,brown,Character
+40,2014-12-19T17:29:32.489000Z,2014-12-20T21:17:50.383000Z,https://swapi.dev/api/people/36/,Jar Jar Binks,52BBY,orange,196,male,orange,66,none,Character
+41,2014-12-19T17:32:56.741000Z,2014-12-20T21:17:50.385000Z,https://swapi.dev/api/people/37/,Roos Tarpals,unknown,orange,224,male,grey,82,none,Character
+42,2014-12-19T17:33:38.909000Z,2014-12-20T21:17:50.388000Z,https://swapi.dev/api/people/38/,Rugor Nass,unknown,orange,206,male,green,unknown,none,Character
+43,2014-12-19T17:45:01.522000Z,2014-12-20T21:17:50.392000Z,https://swapi.dev/api/people/39/,Ric Olié,unknown,blue,183,male,fair,unknown,brown,Character
+44,2014-12-19T17:48:54.647000Z,2014-12-20T21:17:50.395000Z,https://swapi.dev/api/people/40/,Watto,unknown,yellow,137,male,"blue, grey",unknown,black,Character
+45,2014-12-19T17:53:02.586000Z,2014-12-20T21:17:50.397000Z,https://swapi.dev/api/people/41/,Sebulba,unknown,orange,112,male,"grey, red",40,none,Character
+46,2014-12-19T17:55:43.348000Z,2014-12-20T21:17:50.399000Z,https://swapi.dev/api/people/42/,Quarsh Panaka,62BBY,brown,183,male,dark,unknown,black,Character
+47,2014-12-19T17:57:41.191000Z,2014-12-20T21:17:50.401000Z,https://swapi.dev/api/people/43/,Shmi Skywalker,72BBY,brown,163,female,fair,unknown,black,Character
+48,2014-12-19T18:00:41.929000Z,2014-12-20T21:17:50.403000Z,https://swapi.dev/api/people/44/,Darth Maul,54BBY,yellow,175,male,red,80,none,Character
+49,2014-12-20T09:47:02.512000Z,2014-12-20T21:17:50.407000Z,https://swapi.dev/api/people/45/,Bib Fortuna,unknown,pink,180,male,pale,unknown,none,Character
+50,2014-12-20T09:48:01.172000Z,2014-12-20T21:17:50.409000Z,https://swapi.dev/api/people/46/,Ayla Secura,48BBY,hazel,178,female,blue,55,none,Character
+51,2014-12-20T09:53:15.086000Z,2014-12-20T21:17:50.410000Z,https://swapi.dev/api/people/47/,Ratts Tyerel,unknown,unknown,79,male,"grey, blue",15,none,Character
+52,2014-12-20T09:57:31.858000Z,2014-12-20T21:17:50.414000Z,https://swapi.dev/api/people/48/,Dud Bolt,unknown,yellow,94,male,"blue, grey",45,none,Character
+53,2014-12-20T10:02:12.223000Z,2014-12-20T21:17:50.416000Z,https://swapi.dev/api/people/49/,Gasgano,unknown,black,122,male,"white, blue",unknown,none,Character
+54,2014-12-20T10:08:33.777000Z,2014-12-20T21:17:50.417000Z,https://swapi.dev/api/people/50/,Ben Quadinaros,unknown,orange,163,male,"grey, green, yellow",65,none,Character
+55,2014-12-20T10:12:30.846000Z,2014-12-20T21:17:50.420000Z,https://swapi.dev/api/people/51/,Mace Windu,72BBY,brown,188,male,dark,84,none,Character
+56,2014-12-20T10:15:32.293000Z,2014-12-20T21:17:50.422000Z,https://swapi.dev/api/people/52/,Ki-Adi-Mundi,92BBY,yellow,198,male,pale,82,white,Character
+57,2014-12-20T10:18:57.202000Z,2014-12-20T21:17:50.424000Z,https://swapi.dev/api/people/53/,Kit Fisto,unknown,black,196,male,green,87,none,Character
+58,2014-12-20T10:26:47.902000Z,2014-12-20T21:17:50.427000Z,https://swapi.dev/api/people/54/,Eeth Koth,unknown,brown,171,male,brown,unknown,black,Character
+59,2014-12-20T10:29:11.661000Z,2014-12-20T21:17:50.432000Z,https://swapi.dev/api/people/55/,Adi Gallia,unknown,blue,184,female,dark,50,none,Character
+60,2014-12-20T10:32:11.669000Z,2014-12-20T21:17:50.434000Z,https://swapi.dev/api/people/56/,Saesee Tiin,unknown,orange,188,male,pale,unknown,none,Character
+61,2014-12-20T10:34:48.725000Z,2014-12-20T21:17:50.437000Z,https://swapi.dev/api/people/57/,Yarael Poof,unknown,yellow,264,male,white,unknown,none,Character
+62,2014-12-20T10:49:19.859000Z,2014-12-20T21:17:50.439000Z,https://swapi.dev/api/people/58/,Plo Koon,22BBY,black,188,male,orange,80,none,Character
+63,2014-12-20T10:53:26.457000Z,2014-12-20T21:17:50.442000Z,https://swapi.dev/api/people/59/,Mas Amedda,unknown,blue,196,male,blue,unknown,none,Character
+64,2014-12-20T11:10:10.381000Z,2014-12-20T21:17:50.445000Z,https://swapi.dev/api/people/60/,Gregar Typho,unknown,brown,185,male,dark,85,black,Character
+65,2014-12-20T11:11:39.630000Z,2014-12-20T21:17:50.449000Z,https://swapi.dev/api/people/61/,Cordé,unknown,brown,157,female,light,unknown,brown,Character
+66,2014-12-20T15:59:03.958000Z,2014-12-20T21:17:50.451000Z,https://swapi.dev/api/people/62/,Cliegg Lars,82BBY,blue,183,male,fair,unknown,brown,Character
+67,2014-12-20T16:40:43.977000Z,2014-12-20T21:17:50.453000Z,https://swapi.dev/api/people/63/,Poggle the Lesser,unknown,yellow,183,male,green,80,none,Character
+68,2014-12-20T16:45:53.668000Z,2014-12-20T21:17:50.455000Z,https://swapi.dev/api/people/64/,Luminara Unduli,58BBY,blue,170,female,yellow,56.2,black,Character
+69,2014-12-20T16:46:40.440000Z,2014-12-20T21:17:50.457000Z,https://swapi.dev/api/people/65/,Barriss Offee,40BBY,blue,166,female,yellow,50,black,Character
+70,2014-12-20T16:49:14.640000Z,2014-12-20T21:17:50.460000Z,https://swapi.dev/api/people/66/,Dormé,unknown,brown,165,female,light,unknown,brown,Character
+71,2014-12-20T16:52:14.726000Z,2014-12-20T21:17:50.462000Z,https://swapi.dev/api/people/67/,Dooku,102BBY,brown,193,male,fair,80,white,Character
+72,2014-12-20T16:53:08.575000Z,2014-12-20T21:17:50.463000Z,https://swapi.dev/api/people/68/,Bail Prestor Organa,67BBY,brown,191,male,tan,unknown,black,Character
+73,2014-12-20T16:54:41.620000Z,2014-12-20T21:17:50.465000Z,https://swapi.dev/api/people/69/,Jango Fett,66BBY,brown,183,male,tan,79,black,Character
+74,2014-12-20T16:57:44.471000Z,2014-12-20T21:17:50.468000Z,https://swapi.dev/api/people/70/,Zam Wesell,unknown,yellow,168,female,"fair, green, yellow",55,blonde,Character
+75,2014-12-20T17:28:27.248000Z,2014-12-20T21:17:50.470000Z,https://swapi.dev/api/people/71/,Dexter Jettster,unknown,yellow,198,male,brown,102,none,Character
+76,2014-12-20T17:30:50.416000Z,2014-12-20T21:17:50.473000Z,https://swapi.dev/api/people/72/,Lama Su,unknown,black,229,male,grey,88,none,Character
+77,2014-12-20T17:31:21.195000Z,2014-12-20T21:17:50.474000Z,https://swapi.dev/api/people/73/,Taun We,unknown,black,213,female,grey,unknown,none,Character
+78,2014-12-20T17:32:51.996000Z,2014-12-20T21:17:50.476000Z,https://swapi.dev/api/people/74/,Jocasta Nu,unknown,blue,167,female,fair,unknown,white,Character
+79,2014-12-20T17:43:36.409000Z,2014-12-20T21:17:50.478000Z,https://swapi.dev/api/people/75/,R4-P17,unknown,"red, blue",96,female,"silver, red",unknown,none,Character
+80,2014-12-20T17:53:52.607000Z,2014-12-20T21:17:50.481000Z,https://swapi.dev/api/people/76/,Wat Tambor,unknown,unknown,193,male,"green, grey",48,none,Character
+81,2014-12-20T17:58:17.049000Z,2014-12-20T21:17:50.484000Z,https://swapi.dev/api/people/77/,San Hill,unknown,gold,191,male,grey,unknown,none,Character
+82,2014-12-20T18:44:01.103000Z,2014-12-20T21:17:50.486000Z,https://swapi.dev/api/people/78/,Shaak Ti,unknown,black,178,female,"red, blue, white",57,none,Character
+83,2014-12-20T19:43:53.348000Z,2014-12-20T21:17:50.488000Z,https://swapi.dev/api/people/79/,Grievous,unknown,"green, yellow",216,male,"brown, white",159,none,Character
+84,2014-12-20T19:46:34.209000Z,2014-12-20T21:17:50.491000Z,https://swapi.dev/api/people/80/,Tarfful,unknown,blue,234,male,brown,136,brown,Character
+85,2014-12-20T19:49:35.583000Z,2014-12-20T21:17:50.493000Z,https://swapi.dev/api/people/81/,Raymus Antilles,unknown,brown,188,male,light,79,brown,Character
+86,2014-12-20T20:18:37.619000Z,2014-12-20T21:17:50.496000Z,https://swapi.dev/api/people/82/,Sly Moore,unknown,white,178,female,pale,48,none,Character
+87,2014-12-20T20:35:04.260000Z,2014-12-20T21:17:50.498000Z,https://swapi.dev/api/people/83/,Tion Medon,unknown,black,206,male,grey,80,none,Character

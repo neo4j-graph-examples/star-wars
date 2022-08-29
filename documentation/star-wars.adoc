@@ -18,24 +18,31 @@ image::{img}/model.svg[width=100%]
 
 == The Data
 
-The data comes from Kaggle: https://www.kaggle.com/datasets/jsphyg/star-wars
+The data originally comes from the https://SWAPI.dev[Star Wars API^], we turned their JSON data into CSV files.
+// https://www.kaggle.com/datasets/jsphyg/star-wars
 
 We can import it using the visual Import tool, or `LOAD CSV` Cypher statements.
 
 === Nodes
 
-We model the `Character`, `Planet`, `Species` as nodes.
+We model the `Character`, `Planet`, `Species`, `Spaceship`, `Vehicle`, `Film` as nodes.
 
 === Relationships
 
-Characters originate from Planets and identify as Speciees
+Characters have Planets as homeworlds and are of a Species
 
-`(:Character)-[:FROM]->(:Planet)`
-`(:Character)-[:IDENTIFIES_AS]->(:Species)`
-`(:Species)-[:ORIGINATES_FROM]->(:Planet)`
+`(:Character|Species)-[:HOMEWORLD]->(:Planet)`
+`(:Character)-[:OF]->(:Species)`
 
+Characters pilot Spaceships or Vehicles
 
-If you want to see it yourself, run:
+`(:Character)-[:PILOT]->(:Spaceship|Vehicle)`
+
+Everything can appear in a film.
+
+`(:Character|Species|Planet|Spaceship|Vehicle)-[:APPEARS_IN]->(:Film)`
+
+If you want to the schema of the data yourself, run:
 
 [source,cypher]
 ----
@@ -68,7 +75,7 @@ Which are the most frequent species?
 
 [source,cypher]
 ----
-MATCH (s:Species)<-[:IDENTIFIES_AS]-()
+MATCH (s:Species)<-[:OF]-()
 RETURN s.name,  count(*) AS freq
 ORDER BY freq DESC
 LIMIT 5;
@@ -80,9 +87,9 @@ LIMIT 5;
 
 [source,cypher]
 ----
-MATCH path = (s:Species)<-[:IDENTIFIES_AS]-(c:Character)-[:FROM]->(p:Planet)
+MATCH path = (s:Species)<-[:OF]-(c:Character)-[:HOMEWORLD]->(p:Planet)
 WHERE s.name = 'Human'
- RETURN paths
+RETURN path
 ----
 
 //  TODO MORE

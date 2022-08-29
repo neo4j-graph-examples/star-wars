@@ -101,7 +101,7 @@
     <br/>
     <div>
       <div class="paragraph">
-<p>The data comes from Kaggle: <a href="https://www.kaggle.com/datasets/jsphyg/star-wars" class="bare">https://www.kaggle.com/datasets/jsphyg/star-wars</a></p>
+<p>The data originally comes from the <a href="https://SWAPI.dev" target="_blank">Star Wars API</a>, we turned their JSON data into CSV files.</p>
 </div>
 <div class="paragraph">
 <p>We can import it using the visual Import tool, or <code>LOAD CSV</code> Cypher statements.</p>
@@ -111,22 +111,33 @@
 
    <h4>Nodes</h4>
    <div class="paragraph">
-<p>We model the <code>Character</code>, <code>Planet</code>, <code>Species</code> as nodes.</p>
+<p>We model the <code>Character</code>, <code>Planet</code>, <code>Species</code>, <code>Spaceship</code>, <code>Vehicle</code>, <code>Film</code> as nodes.</p>
 </div>
 
 
 
    <h4>Relationships</h4>
    <div class="paragraph">
-<p>Characters originate from Planets and identify as Speciees</p>
+<p>Characters have Planets as homeworlds and are of a Species</p>
 </div>
 <div class="paragraph">
-<p><code>(:Character)-[:FROM]&#8594;(:Planet)</code>
-<code>(:Character)-[:IDENTIFIES_AS]&#8594;(:Species)</code>
-<code>(:Species)-[:ORIGINATES_FROM]&#8594;(:Planet)</code></p>
+<p><code>(:Character|Species)-[:HOMEWORLD]&#8594;(:Planet)</code>
+<code>(:Character)-[:OF]&#8594;(:Species)</code></p>
 </div>
 <div class="paragraph">
-<p>If you want to see it yourself, run:</p>
+<p>Characters pilot Spaceships or Vehicles</p>
+</div>
+<div class="paragraph">
+<p><code>(:Character)-[:PILOT]&#8594;(:Spaceship|Vehicle)</code></p>
+</div>
+<div class="paragraph">
+<p>Everything can appear in a film.</p>
+</div>
+<div class="paragraph">
+<p><code>(:Character|Species|Planet|Spaceship|Vehicle)-[:APPEARS_IN]&#8594;(:Film)</code></p>
+</div>
+<div class="paragraph">
+<p>If you want to the schema of the data yourself, run:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -180,7 +191,7 @@ ORDER BY freq DESC;<!--/code--></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre mode="cypher"  class="highlight pre-scrollable programlisting cm-s-neo code runnable standalone-example ng-binding" data-lang="cypher" lang="cypher"><!--code class="cypher language-cypher"-->MATCH (s:Species)&lt;-[:IDENTIFIES_AS]-()
+<pre mode="cypher"  class="highlight pre-scrollable programlisting cm-s-neo code runnable standalone-example ng-binding" data-lang="cypher" lang="cypher"><!--code class="cypher language-cypher"-->MATCH (s:Species)&lt;-[:OF]-()
 RETURN s.name,  count(*) AS freq
 ORDER BY freq DESC
 LIMIT 5;<!--/code--></pre>
@@ -199,9 +210,9 @@ LIMIT 5;<!--/code--></pre>
     <div>
       <div class="listingblock">
 <div class="content">
-<pre mode="cypher"  class="highlight pre-scrollable programlisting cm-s-neo code runnable standalone-example ng-binding" data-lang="cypher" lang="cypher"><!--code class="cypher language-cypher"-->MATCH path = (s:Species)&lt;-[:IDENTIFIES_AS]-(c:Character)-[:FROM]-&gt;(p:Planet)
+<pre mode="cypher"  class="highlight pre-scrollable programlisting cm-s-neo code runnable standalone-example ng-binding" data-lang="cypher" lang="cypher"><!--code class="cypher language-cypher"-->MATCH path = (s:Species)&lt;-[:OF]-(c:Character)-[:HOMEWORLD]-&gt;(p:Planet)
 WHERE s.name = 'Human'
- RETURN paths<!--/code--></pre>
+RETURN path<!--/code--></pre>
 </div>
 </div>
 	</div>
